@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+
+    <title>Loja do Seu Zé</title>
+  </head>
+  <body class="container">
+
+    <h1 class="py-5 text-center display-4">Loja do Seu Zé</h1>
+
+    <section class="py-5 row">
+
+        <section id="display" class="border py-4 pl-4 col-sm-6">
+          <h4 class="text-primary">Total da compra:</h4>
+          <h5 class="text-secondary d-inline pr-2"><input type="text" id="valorRecebido" class="text-secondary" placeholder=" R$ 0">
+          <h4 class="text-primary">Dinheiro para pagemento:</h4>
+          <h5 class="text-secondary d-inline pr-2"><input type="text" id="valorRecebido" class="text-secondary" placeholder=" R$ 0"></h5>
+          <h4 class="text-primary">Troco:</h4>
+          <h5 class="text-secondary">R$30,00</h5>
+          <button type="button" onclick="verificaValores()" class="btn btn-success mt-4">Enviar</button><button type="button" class="btn btn-danger ml-2 mt-4"">Cancelar</button>
+
+        </section>
+
+        <section id="lista-itens" class="border py-4 col-sm-6">
+          <h4 class="text-primary">Lista de itens na compra:</h4>
+          <section id="itens">
+            <span class="btn btn-success mb-1">Macarrão <span class="badge badge-light">9</span></span>
+            <span class="btn btn-success mb-1">Arroz <span class="badge badge-light">2</span></span>
+          </section>
+
+        </section>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
