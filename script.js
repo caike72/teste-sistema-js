@@ -1,14 +1,28 @@
             
     //recuperar o valor contido no campo de texto
     function verificaValores() {
-        var valor = document.getElementById('valorRecebido').value 
+        var valorRecebido = document.getElementById('valorRecebido').value
+        var totalCompra = document.getElementById('totalCompra').value
 
-        if (valor == 0) {
+
+        if (valorRecebido == 0) {
             alert('Informe um valor válido')
         }
 
-        console.log(valor)
+        //cálculo do troco
+
+        if (valorRecebido > totalCompra) {
+            document.getElementById('troco').style.color = '#28A745'
+        } if (valorRecebido < totalCompra) {
+            document.getElementById('troco').style.color = '#DC3545'
+            alert('Dinheiro não suficiente para completar a compra.')
+        }
+
+        var troco = valorRecebido - totalCompra
+
+        document.getElementById('troco').innerHTML = 'R$' + troco
+
     }
 
-    //
+  
 
