@@ -11,9 +11,9 @@
 
         //cálculo do troco
 
-        if (valorRecebido > totalCompra) {
+        if (valorRecebido >= totalCompra) {
             document.getElementById('troco').style.color = '#28A745'
-        } if (valorRecebido < totalCompra) {
+        } else {
             document.getElementById('troco').style.color = '#DC3545'
             alert('Dinheiro não suficiente para completar a compra.')
         }
