@@ -21,7 +21,7 @@
 
         <section id="display" class="py-4 pl-4 col-sm-6">
           <h4 class="text-primary">Total da compra:</h4>
-          <h5 class="text-secondary d-inline pr-2"><input type="text" id="totalCompra" class="text-secondary" placeholder=" R$ 0" readonly>
+          <h5 class="text-secondary d-inline pr-2"><input type="text" id="totalCompra" class="text-secondary" placeholder=" R$ 0" disabled="disabled">
           <h4 class="text-primary">Dinheiro para pagamento:</h4>
           <h5 class="text-secondary d-inline pr-2"><input type="text" id="valorRecebido" class="text-secondary" placeholder=" R$ 0"></h5>
           <h4 class="text-primary">Troco:</h4>
@@ -32,50 +32,46 @@
 
         <section id="lista-itens" class="py-4 col-sm-6">
           <h4 class="text-primary">Carrinho de compras:</h4>
-          <section id="itens">
-            <span class="btn btn-success mb-1">Macarrão <span class="badge badge-light">9</span></span>
-            <span class="btn btn-success mb-1">Arroz <span class="badge badge-light">2</span></span>
-          </section>
-
+          <span>Não vai funcionar por enquanto.</span>
         </section>
         
           <h4 class="text-primary col-sm-12 pb-4">Itens da Loja:</h4>
           <div class="col-sm-3">
             <h5 class="text-danger text-center">Diversos</h5>
-            <span>Arroz</span> <span class="text-success">R$ 15.99</span><input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <span>Arroz</span> <span class="text-success">R$ 15.99</span><input class="d-inline-block w-100" onclick="atualizaPreco()"type="number" id="arroz" min="0" max="10" value="0">
             <br/>
-            <span>Feijão</span> <span class="text-success">R$ 5.65</span>  <input class="d-inline-block w-100" type="number" id="feijao" min="0" max="10" value="0">
+            <span>Feijão</span> <span class="text-success">R$ 5.65</span>  <input class="d-inline-block w-100" onclick="atualizaPreco()" type="number" id="feijao" min="0" max="10" value="0">
             <br/>
-            <span>Macarrão</span> <span class="text-success">R$ 4.50</span> <input  class="d-inline-block w-100" type="number" id="macarrao" min="0" max="10" value="0">
+            <span>Macarrão</span> <span class="text-success">R$ 4.50</span> <input  class="d-inline-block w-100" onclick="atualizaPreco()" type="number" id="macarrao" min="0" max="10" value="0">
             <br/>
           </div>
 
           <div class="col-sm-3">
             <h5 class="text-danger text-center">Carnes</h5>
-            <spa>Carne moída</span> <span class="text-success">R$ 10 </span><input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <spa>Carne moída</span> <span class="text-success">R$ 10 </span><input class="d-inline-block w-100" onclick="atualizaPreco()" type="number" id="carne_moida" min="0" max="10" value="0">
             <br/>
-            <span>Carne de Frango</span> <span class="text-success">R$ 25 </span><input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10"value="0">
+            <span>Carne de Frango</span> <span class="text-success">R$ 25 </span><input class="d-inline-block w-100" onclick="atualizaPreco()" type="number" id="carne_de_frango" min="0" max="10"value="0">
             <br/>
-            <span>Bife</span> <span class="text-success">R$ 30 </span> <input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <span>Bife</span> <span class="text-success">R$ 30 </span> <input class="d-inline-block w-100" type="number" onclick="atualizaPreco()" id="bife" min="0" max="10" value="0">
             <br/>
           </div>
 
           <div class="col-sm-3">
             <h5 class="text-danger text-center">Frutas</h5>
-            <span>Laranja</span> <span class="text-success">R$ 5.50 </span> <input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <span>Laranja</span> <span class="text-success">R$ 5.50 </span> <input class="d-inline-block w-100" type="number" onclick="atualizaPreco()" id="laranja" min="0" max="10" value="0">
             <br/>
-            <span>Maçã</span> <span class="text-success">R$ 6.25 </span> <input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <span>Maçã</span> <span class="text-success">R$ 6.25 </span> <input class="d-inline-block w-100" type="number" onclick="atualizaPreco()" id="maca" min="0" max="10" value="0">
             <br/>
-            <span>Maracujá</span> <span class="text-success">R$ 10 </span> <input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <span>Maracujá</span> <span class="text-success">R$ 10 </span> <input class="d-inline-block w-100" type="number" onclick="atualizaPreco()" id="maracuja" min="0" max="10" value="0">
             <br/>
           </div>
           <div class="col-sm-3">
             <h5 class="text-danger text-center">Bebidas</h5>
-            <span>Água mineral</span> <span class="text-success">R$ 2.50</span> <input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <span>Água mineral</span> <span class="text-success">R$ 2.50</span> <input class="d-inline-block w-100" type="number" onclick="atualizaPreco()" id="agua_mineral" min="0" max="10" value="0">
             <br/>
-            <span>Refrigerante</span> <span class="text-success">R$ 6</span> <input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <span>Refrigerante</span> <span class="text-success">R$ 6</span> <input class="d-inline-block w-100" type="number" onclick="atualizaPreco()" id="refrigerante" min="0" max="10" value="0">
             <br/>
-            <span>Suco</span> <span class="text-success">R$ 2.50</span> <input class="d-inline-block w-100" type="number" id="arroz" min="0" max="10" value="0">
+            <span>Suco</span> <span class="text-success">R$ 2.50</span> <input class="d-inline-block w-100" type="number" onclick="atualizaPreco()" id="suco" min="0" max="10" value="0">
             <br/>
           </div>
     </section >
